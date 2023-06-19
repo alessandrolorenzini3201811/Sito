@@ -1,5 +1,12 @@
 const http = require('http');
+const express = require('express')
 
+const app = express()
+
+app.use()
+app.get('/',(req,res)=>{
+    res.send("ciao")
+})
 // Crea un server HTTP
 const server = http.createServer((req, res) => {
   // Imposta l'intestazione della risposta
