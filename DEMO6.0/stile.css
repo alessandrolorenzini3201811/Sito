@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color-scheme: dark;
+}
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.container {
+  background-color: #000000;
+}
+
+
+#cy {
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  top: 40%;
+  left: 55%;
+}
+
+.text {
+  position: absolute;
+  top: 5%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-transform: uppercase;
+  font-family: "Söhne", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 6em;
+  font-weight: 700;
+  color: #000000;
+}
+
+
+.text1 {
+  position: absolute;
+  top: 25%;
+  right: 75%;
+  transform: translate(50%, -50%);
+  text-transform: uppercase;
+  font-family: "Söhne", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 4em;
+  font-weight: 500;
+  color: #2b2c29;
+}
+
+.text2 {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  transform: translate(50%, -50%);
+  text-transform: uppercase;
+  font-family: "Söhne", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 4em;
+  font-weight: 500;
+  color: #2b2c29;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.description {
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-transform: uppercase;
+  font-family: "Söhne", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2em;
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+.imm_unipg{
+  top:5%;
+  left: 3%; 
+  position: fixed;
+  background-color: transparent;
+  width: 15%;
+}
+
+.button {
+  width: 10%;
+  height: auto; 
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10%;
+  left: 49%; 
+  transform: translateX(-50%); 
+}
+
+
+#bodybox {
+  margin: auto;
+  max-width: 550px;
+  font: 15px arial, sans-serif;
+  background-color: rgba(233, 233, 233, 0.445);
+  border-style: solid;
+  border-width: 1px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
+  box-shadow: 5px 5px 5px rgb(34, 34, 34);
+  border-radius: 15px;
+
+}
+
+
+.response-container {
+  margin-bottom: 10px;
+}
+
+
+#chatborder {
+  overflow-y: scroll;
+  /*max-height: calc(100vh - 500px);*/
+  height: 400px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-weight: 500;
+  font-size: .8vw;
+  color: #fff;
+  background-color:rgb(28,28,30);
+  box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  margin-top: 20%;
+  margin-bottom: 100px;
+  margin-left: 5%;
+  margin-right: 50%;
+ 
+}
+
+.chatborder:hover {
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+.chatborder:focus {
+  box-shadow: 0 0 0 .15vw skyblue;
+}
+.domanda{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-weight: 500;
+  font-size: .8vw;
+  color:#23219b;
+  text-align: right;
+}
+
+.risposta{
+  font: 15px arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color:#851c1c;
+  text-align: left;
+
+}
+
+.dimlogosinistra{
+  width: 40px; 
+  height: auto;
+}
+.dimlogodestra{
+  width: 40px; 
+  height: auto;
+}
+
+.image-container {
+  margin-left: 5px; 
+}
+.image-containerdestra {
+  margin-right: 5px; 
+}
+
+.paragraph-container {
+
+  align-items: center;
+  flex-grow: 1;
+  font: 15px arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color:#ffffff;
+  text-align: left;
+}
+
+.paragraph-containerdom {
+
+  align-items: center;
+  flex-grow: 1;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-weight: 500;
+  font-size: .8vw;
+  color: #fff;
+  text-align: right;
+}
+
+.paragraph-container p {
+  margin: 0;
+}
+
+.chatlog {
+   font: 15px arial, sans-serif;
+   font-family: 'Roboto', sans-serif;
+   color:#ffffff;
+   text-align: left;
+}
+
+.chatbox{
+  border-width: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 15px;
+  background-color: rgba(135, 207, 235, 0.186);
+  color: #ffffff;
+  border-radius: 5px;
+  width: 50%;
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.userList {
+  margin-top: 20px;
+}
+
+.userList p {
+  font-size: 14px;
+  color: #b31818;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.transcription {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 0.8vw;
+  color: #fff;
+  background-color: rgb(28, 28, 30);
+  box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 0.4vw;
+  width: 40%; /* Modifica la percentuale desiderata */
+  transition: 0.4s;
+  position: fixed;
+  left: 27%;
+  transform: translateX(-50%);
+  /*bottom: calc(50px + env(safe-area-inset-bottom));*/
+  bottom: 10%;
+}
+
+
+.input:hover {
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 .15vw rgb(0, 0, 0);
+}
+
+
+.pargris{
+  background-color: #000000;
+}
+
+
+
+.procontro{
+  top: 10%;
+}
+
+.switch {
+
+  --circle-dim: 1.4em;
+  font-size: 17px;
+  position: absolute;
+  top: 31%;
+  left: 9%;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f5aeae;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider-card {
+  position: absolute;
+  content: "";
+  height: var(--circle-dim);
+  width: var(--circle-dim);
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  transition: .4s;
+  pointer-events: none;
+}
+
+.slider-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  border-radius: 50%;
+  transition: .4s transform;
+}
+
+.slider-card-front {
+  background-color: #DC3535;
+}
+
+.slider-card-back {
+  background-color: #379237;
+  transform: rotateY(180deg);
+}
+
+input:checked ~ .slider-card .slider-card-back {
+  transform: rotateY(0);
+}
+
+input:checked ~ .slider-card .slider-card-front {
+  transform: rotateY(-180deg);
+}
+
+input:checked ~ .slider-card {
+  transform: translateX(1.5em);
+}
+
+input:checked ~ .slider {
+  background-color: #9ed99c;
+}
