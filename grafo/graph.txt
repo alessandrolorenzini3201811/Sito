@@ -1,0 +1,297 @@
+-------------- grafo dopo chiusura con attacchi e supporti --------------
+arg(1)
+arg(2)
+arg(3)
+arg(4)
+arg(5)
+arg(6)
+arg(7)
+arg(8)
+arg(9)
+arg(10)
+arg(12)
+arg(13)
+arg(14)
+arg(15)
+arg(16)
+arg(11)
+att(1,2):-1.
+att(1,10):-1.
+att(1,14):-1.
+att(1,16):-1.
+att(1,11):-1.
+att(2,1):-1.
+supp(3,2):1.
+supp(4,1):1.
+supp(5,4):1.
+supp(6,1):1.
+att(6,8):-1.
+supp(7,6):1.
+att(8,6):-1.
+supp(9,8):1.
+att(10,1):1.
+att(12,11):-1.
+supp(13,12):1.
+att(14,1):1.
+supp(15,11):1.
+att(16,1):1.
+att(11,1):-1.
+att(11,12):-1.
+
+{"nodes": [{"data": {"id": "1", "label": "1"}}, {"data": {"id": "2", "label": "2"}}, {"data": {"id": "3", "label": "3"}}, {"data": {"id": "4", "label": "4"}}, {"data": {"id": "5", "label": "5"}}, {"data": {"id": "6", "label": "6"}}, {"data": {"id": "7", "label": "7"}}, {"data": {"id": "8", "label": "8"}}, {"data": {"id": "9", "label": "9"}}, {"data": {"id": "10", "label": "10"}}, {"data": {"id": "12", "label": "12"}}, {"data": {"id": "13", "label": "13"}}, {"data": {"id": "14", "label": "14"}}, {"data": {"id": "15", "label": "15"}}, {"data": {"id": "16", "label": "16"}}, {"data": {"id": "11", "label": "11"}}], "edges": [{"data": {"id": "12", "source": "1", "target": "2", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "110", "source": "1", "target": "10", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "114", "source": "1", "target": "14", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "116", "source": "1", "target": "16", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "111", "source": "1", "target": "11", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "21", "source": "2", "target": "1", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "32", "source": "3", "target": "2", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "41", "source": "4", "target": "1", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "54", "source": "5", "target": "4", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "61", "source": "6", "target": "1", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "68", "source": "6", "target": "8", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "76", "source": "7", "target": "6", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "86", "source": "8", "target": "6", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "98", "source": "9", "target": "8", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "101", "source": "10", "target": "1", "color": "red", "weight": 1, "directed": true}}, {"data": {"id": "1211", "source": "12", "target": "11", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "1312", "source": "13", "target": "12", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "141", "source": "14", "target": "1", "color": "red", "weight": 1, "directed": true}}, {"data": {"id": "1511", "source": "15", "target": "11", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "161", "source": "16", "target": "1", "color": "red", "weight": 1, "directed": true}}, {"data": {"id": "111", "source": "11", "target": "1", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "1112", "source": "11", "target": "12", "color": "red", "weight": -1, "directed": true}}]}
+
+
+-------------- grafo dopo chiusura solo attacchi --------------
+arg(1).
+arg(2).
+arg(3).
+arg(4).
+arg(5).
+arg(6).
+arg(7).
+arg(8).
+arg(9).
+arg(10).
+arg(12).
+arg(13).
+arg(14).
+arg(15).
+arg(16).
+arg(11).
+att(1,2):-1.
+att(1,10):-1.
+att(1,14):-1.
+att(1,16):-1.
+att(1,11):-1.
+att(2,1):-1.
+att(6,8):-1.
+att(8,6):-1.
+att(10,1):1.
+att(12,11):-1.
+att(14,1):1.
+att(16,1):1.
+att(11,1):-1.
+att(11,12):-1.
+
+{"nodes": [{"data": {"id": "1", "label": "1"}}, {"data": {"id": "2", "label": "2"}}, {"data": {"id": "3", "label": "3"}}, {"data": {"id": "4", "label": "4"}}, {"data": {"id": "5", "label": "5"}}, {"data": {"id": "6", "label": "6"}}, {"data": {"id": "7", "label": "7"}}, {"data": {"id": "8", "label": "8"}}, {"data": {"id": "9", "label": "9"}}, {"data": {"id": "10", "label": "10"}}, {"data": {"id": "12", "label": "12"}}, {"data": {"id": "13", "label": "13"}}, {"data": {"id": "14", "label": "14"}}, {"data": {"id": "15", "label": "15"}}, {"data": {"id": "16", "label": "16"}}, {"data": {"id": "11", "label": "11"}}], "edges": [{"data": {"id": "12", "source": "1", "target": "2", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "110", "source": "1", "target": "10", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "114", "source": "1", "target": "14", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "116", "source": "1", "target": "16", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "111", "source": "1", "target": "11", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "21", "source": "2", "target": "1", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "68", "source": "6", "target": "8", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "86", "source": "8", "target": "6", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "101", "source": "10", "target": "1", "color": "red", "weight": 1, "directed": true}}, {"data": {"id": "1211", "source": "12", "target": "11", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "141", "source": "14", "target": "1", "color": "red", "weight": 1, "directed": true}}, {"data": {"id": "161", "source": "16", "target": "1", "color": "red", "weight": 1, "directed": true}}, {"data": {"id": "111", "source": "11", "target": "1", "color": "red", "weight": -1, "directed": true}}, {"data": {"id": "1112", "source": "11", "target": "12", "color": "red", "weight": -1, "directed": true}}]}
+
+
+-------------- grafo dopo chiusura solo supporti --------------
+arg(1)
+arg(2)
+arg(3)
+arg(4)
+arg(5)
+arg(6)
+arg(7)
+arg(8)
+arg(9)
+arg(10)
+arg(12)
+arg(13)
+arg(14)
+arg(15)
+arg(16)
+arg(11)
+supp(3,2'):1.
+supp(4,1'):1.
+supp(5,4'):1.
+supp(6,1'):1.
+supp(7,6'):1.
+supp(9,8'):1.
+supp(13,12'):1.
+supp(15,11'):1.
+
+{"nodes": [{"data": {"id": "1", "label": "1"}}, {"data": {"id": "2", "label": "2"}}, {"data": {"id": "3", "label": "3"}}, {"data": {"id": "4", "label": "4"}}, {"data": {"id": "5", "label": "5"}}, {"data": {"id": "6", "label": "6"}}, {"data": {"id": "7", "label": "7"}}, {"data": {"id": "8", "label": "8"}}, {"data": {"id": "9", "label": "9"}}, {"data": {"id": "10", "label": "10"}}, {"data": {"id": "12", "label": "12"}}, {"data": {"id": "13", "label": "13"}}, {"data": {"id": "14", "label": "14"}}, {"data": {"id": "15", "label": "15"}}, {"data": {"id": "16", "label": "16"}}, {"data": {"id": "11", "label": "11"}}], "edges": [{"data": {"id": "32", "source": "3", "target": "2", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "41", "source": "4", "target": "1", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "54", "source": "5", "target": "4", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "61", "source": "6", "target": "1", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "76", "source": "7", "target": "6", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "98", "source": "9", "target": "8", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "1312", "source": "13", "target": "12", "color": "green", "weight": 1, "directed": true}}, {"data": {"id": "1511", "source": "15", "target": "11", "color": "green", "weight": 1, "directed": true}}]}
+
+
+
+
+
+
+
+
+
+ARGUMENT_ONE = ['ARGUMENT_ONE']
+
+ARGUMENT_TWO = [
+    'Violent video games do not addition aggression.',
+    'Violent TV games do not increase aggression.',
+	'Violent video games do not gain aggression.',
+	'Violent video games do not step-up aggression.',
+	'Violent video games do not increment aggression.',
+	'Violent video biz do not increase aggression.',
+	'Violent video game do not increment aggression.',
+	'Violent video games do not growth aggression.',
+	'Violent picture games do not increment aggression.',
+	'Violent video games do not increment aggressiveness.',
+	"Violent video games don't bring violence.",
+	"Violent video games don't add aggression.",
+	"Violent video games don't add assault.",
+	"Violent video games don't add attack.",
+	'Aggression does not add to violent video games.',
+	'Aggression does not contribute to violent video games.',
+	'Aggression does not complement violent video games.'
+]
+
+ARGUMENT_THREE = [
+    "Violent video games players in their beliefs about aggression after playing the game were not statistically different from the non-playing control group than they were before playing.",
+    "Neither was the game a predictor of aggressive behaviour.",
+    "Nor was game play an aggressive behavior predictor.",
+    "The players did not increase their argumentative behaviors after playing the game compared to the control group, nor were they much more likely to argue with their friends and partners.",
+    "The players did not raise their argumentative behaviors during game play relative to the control group, nor were they any more likely to argue with their friends and partners.",
+    "The participants did not raise their argumentative actions during game play relative to the control group, nor were they any more likely to argue with their friends and families.",
+    "The participants did not improve their argumentative actions during game play relative to the control group, nor were they any more inclined to dispute with their friends and spouses.",
+    "Violent video games players in their opinions on hostility after completing the game were not substantially different from the non-playing control category that they were before completing.",
+    "Neither was the game a indicator of violent behavior."
+]
+
+ARGUMENT_FOUR = [
+    "Some young people have tried to emulate gambling violence.",
+    "Some teenagers have tried to emulate game violence.",
+    "Some young people have tried to emulate game violence.",
+    "Some young people have been trying to emulate game violence.",
+    "Some young people have attempted to emulate game violence.",
+    "Some teens have been trying to emulate violence in games.",
+    "Some teens have tried to emulate violence in games.",
+    "Some adolescents have tried to emulate violence in games.",
+    "Some teenagers have tried to emulate violence in games.",
+    "Some adolescents attempted to emulate game violence.",
+    "Some adolescents have attempted to emulate game violence.",
+    "Some adolescents have been trying to emulate game violence."
+]
+
+ARGUMENT_FIVE = [
+    "Protagonist in the video game which is wildly popular.",
+    "Protagonist in video game that is wildly popular.",
+    "Protagonist in a video game that is widely popular.",
+    "In the massively popular video game, the protagonist.",
+    "In the immensely famous video game, the lead."
+]
+
+ARGUMENT_SIX = [
+    "Young people playing violent games display more aggression.",
+    "Young people playing violent games show more aggression.",
+    "More aggression is exhibited by youth playing violent games.",
+    "More aggression is exhibited by young people playing violent games.",
+    "More aggression exhibits youth playing violent games.",
+    "Young people who play violent games exhibit more aggression.",
+    "Young people playing violent games exhibit more aggression.",
+    "Young people playing violent games will exhibit more aggression.",
+    "Young people who play aggressive games show more hostility.",
+    "Young people playing violent games display more violence.",
+    "Youth playing violent games display more violence.",
+    "Young people playing violent games show more violence.",
+    "Young people playing violent games exhibit more violence.",
+    "Further violence is demonstrated by adolescents playing aggressive games.",
+    "Additional aggression is demonstrated among adolescents playing violent games.",
+    "Additional violence is shown by youths playing aggressive games.",
+    "Adolescents playing aggressive games are showing further violence."
+]
+
+ARGUMENT_SEVEN = [
+    "Children who view violent television shows or films or who play violent video games are significantly more likely to behave aggressively in comparison to children who view nonviolent television shows or films, or who play nonviolent video games.",
+    "In long-term studies, individuals who consume violent media during childhood end up more aggressive as adults, in comparison with peers who consume nonviolent media during childhood."
+]
+
+ARGUMENT_EIGHT = [
+    "People know that the violence in video games is fake.",
+    "People are aware that violence in video games is fake.",
+    "People know that violence in video games is fake.",
+    "People know the brutality of video games is false.",
+    "People are conscious that violence against video games is fictional.",
+    "People realize that the violence in video games is fictional.",
+    "People are conscious the violence in video games is false.",
+    "People know the violence in video games is bogus.",
+    "People know the violence in video games is counterfeit.",
+    "People know the video game violence is fake.",
+    "The violence in video games is fake, people know."
+]
+
+ARGUMENT_NINE = [
+    "Young people know it: You know it's fake with video games.",
+    "Young people know it: You think it's fake for video games."
+]
+
+ARGUMENT_TEN = [
+    "There's far better evidence on TV news to support psychological harm from exposure to violence.",
+    "There is much better evidence on TV news for supporting psychological harm from exposure to violence.",
+    "There is much more evidence on television news to confirm psychological damage from exposure to abuse.",
+    "There's much more evidence on TV news to support psychological damage from exposure to violence.",
+    "There is much more evidence on TV news to confirm psychological damage from exposure to violence.",
+    "There is also clearer data on TV news suggesting psychological damage from exposure to violence.",
+    "There is also clearer data on TV news suggesting psychological risk from reaction to violence.",
+    "There is much more data on cable coverage to confirm psychological risk from exposure to abuse.",
+    "There is much greater proof on tv coverage to suggest psychological damage from access to aggression.",
+    "There's much more data on Television shows to confirm psychological risk from reaction to abuse."
+]
+
+ARGUMENT_ELEVEN = [
+    "Games help to develop the minds, skills and confidence of young people.",
+    "Games help develop the minds, skills, and confidence of young people.",
+    "Games help grow the minds, knowledge, and motivation of young people.",
+    "Games help to improve the brains, talents, and motivation of young people.",
+    "Games help develop the minds, abilities, and confidence of young people.",
+    "Such games may indeed have some positive effects on the development of minds.",
+    "In fact, such games could have some positive effects on developing minds.",
+    "In reality, these games may have some beneficial impact on developing brains.",
+    "Actually, these games may have certain beneficial impact on growing brains.",
+    "Possibly, these games may have certain beneficial impact on growing brains."
+]
+
+ARGUMENT_TWELVE = [
+    "Violent video games pose a real threat to young minds.",
+    "Violent video games constitute real danger for young minds.",
+    "Violent video games constitute a real danger to the young mind.",
+    "Violent video games constitute a real danger for young minds.",
+    "Violent video games represent a real danger for young people.",
+    "Violent video games represent a real danger to young minds.",
+    "Violent video games reflect a serious risk for young people.",
+    "Aggressive computer games raise serious threats to young minds.",
+    "Aggressive computer games pose serious danger to young minds.",
+    "Violent video games pose a major threat to young minds.",
+    "Violent video games pose a serious challenge to young minds.",
+    "Aggressive video games face major risks to teenage minds.",
+    "Violent video games are causing significant risks to young people."
+]
+
+ARGUMENT_THIRTEEN = [
+    "Research studies have concluded that the effect of violent media use on aggressive behavior is statistically in the same ballpark as the effect of smoking on lung cancer, the effect of lead exposure on the intellectual development of children, and the effect of asbestos on laryngeal cancer.",
+    "Research studies have shown that the effect of violent media consumption on aggressive behavior is statistically the same as the effect of smoking on lung cancer, the effect of lead exposure on the intellectual development of children, and the effect of asbestos on laryngeal cancer in the same ballpark.",
+    "Scientific findings have found that the impact of violent television use on abusive activity is statistically similar to the influence of smoking on lung disease, the impact of lead toxicity on the academic growth of children, and the influence of asbestos on laryngeal cancer in the same ballpark.",
+    "Study findings also found that the impact of violent television use on abusive actions is approximately about the same range as the influence of smoking on lung disease, the impact of lead contamination on the academic growth of children and the influence of asbestos on laryngeal cancer."
+]
+
+ARGUMENT_FOURTEEN = [
+    "Psychological studies which show a connection between exposure to violent video games and harmful effects on children do not show that such exposure causes aggressive action by minors. Any demonstrated effects are both small and indistinguishable from other media-generated effects.",
+    "Psychological studies aimed at showing a connection between exposure to violent video games and harmful effects on children do not prove that such exposure is causing aggressive actions by minors. Any proven effects are small as well as indistinguishable from the effects produced by other media.",
+    "Psychological research aimed at demonstrating a link between addiction to violent video games and adverse effects on adolescents do not indicate that this consumption is causing physical behavior by minors. Any effects demonstrated are small as well as indistinguishable from the effects produced by other media.",
+    "Psychological research aimed at demonstrating a link between addiction to violent video games and adverse effects on adolescents do not indicate that this behavior is affecting physical action by minors. Any proven effects are both small and indistinguishable from the effects that other media produce.",
+    "Psychological research aimed at demonstrating a link between addiction to violent video games and adverse effects on adolescents do not indicate that such behavior is affecting physical action by juveniles. Any proven effects are both small and indistinguishable from the effects that other media produce.",
+    "Psychological research aimed at demonstrating a link between addiction to violent video games and adverse effects on adolescents do not suggest that this consumption is triggering physical behavior by juveniles. Any shown effects are small as well as indistinguishable from the effects produced by other media."
+]
+
+ARGUMENT_FIFTEEN = [
+    "In particular, violent video games are likely to affect the baby.",
+    "Violent video games are likely to harm the children in particular.",
+    "Children are particularly likely to be harmed by violent video games.",
+    "In particular, violent video games are likely to harm children.",
+    "Children are particularly likely to suffer from violent video games.",
+    "In fact, violent video games are likely to affect the children.",
+    "Violent computer games are likely to affect the children in particular.",
+    "Kids are especially likely to be affected by violent video games.",
+    "Kids are more likely to suffer from violent video games.",
+    "Violent video games are likely to affect the children in particular."
+]
+
+ARGUMENT_SIXTEEN = [
+    "The data shows that violence against young people is continuing to decline.",
+    "The data show that violence against young people continues to decline.",
+    "The report reveals that abuse against young people tends to decrease.",
+    "Data reveals that aggression among young people is starting to decrease.",
+    "Now it has hit its lowest levels in years.",
+    "Now it has reached its lowest rate in years.",
+    "It has now reached its lowest rate in years.",
+    "Consequently, violent video games can hardly be seen as a major problem, as they have been around for years.",
+    "Violent computer games, however, as they have been around for years, should hardly be seen as a significant issue."
+]

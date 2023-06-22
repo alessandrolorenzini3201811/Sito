@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>React App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=zR8asrHn"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+  <link rel="stylesheet" href="stile.css">
+ 
+ <body>
+
+
+
+  <div class="container">
+    <p class="text">UNIPG CHATBOT</p>
+    <p class="text1">FRONTEND</p>
+    <p class="text2">BACKEND</p>
+    <p>ITA</p>
+    <p>ING</p>
+    <img src="logo-coro-unipg.png" class="imm_unipg">
+  </div>
+
+  <label class="switch">
+    <div class="slider2">
+        <input type="checkbox" class="slider-switch2" id="mySwitch2">
+        <label for="mySwitch2"></label>
+    </div>
+  </label>
+
+  <label class="switch1">
+
+      <div class="slider1">
+
+        <input type="checkbox" class="slider-switch" id="mySwitch">
+
+        <label for="mySwitch"></label>
+      </div>
+
+  </label>
+  <div></div>
+
+
+
+
+
+    <div id="chatborder" class="paragraph-container" ref={chatContainerRef}>
+      <p id="data-container"></p>
+    </div>
+    <input type="text" name="text" class="input" placeholder="Fammi una domanda" id="input-field">
+    <button class="button" id="button">
+      <img src="micdef2.png" class="button" alt="Button Image">
+    </button>
+    <div id="cy"></div>
+    <script src="scrpt.js"></script>
+    
+    <script>
+      var risposte = [""];
+      const recognition = new window.webkitSpeechRecognition();
+
+      const outputDiv = document.getElementById('chatborder');
+      const inputField = document.getElementById('input-field');
+      const button = document.getElementById('button');
+
+      inputField.addEventListener('input', handleInputChange);
+      inputField.addEventListener('keydown', handleKeyPress);
+      button.addEventListener('click', handleButtonClick);
+
+      let inputValue = '';
+
+      function handleInputChange(event) {
+        inputValue = event.target.value;
+      }
+
+
+      function textToSpeechIta(text) {
+        responsiveVoice.speak(text, 'Italian Female', {
+          volume: 1, 
+          rate: 1, 
+          pitch: 1 
+        });
+      }
+      function textToSpeechIng(text) {
+        responsiveVoice.speak(text, 'US English Female', {
+          volume: 1, 
+          rate: 1, 
+          pitch: 1 
+        });
+
+      }
+
+
+      window.onload = function() {
+        $.ajax({
+          url: "http://localhost:5000/passaggio-gen",
+          method: "GET",
+
+          success: function(data) {
+
+            outputDiv.innerHTML += "<p>" + "<strong>UNIPG</strong>" + "</p>";
+
+          var responseParagraph = document.createElement('p');
+            responseParagraph.classList.add('response-paragraph');
+            outputDiv.appendChild(responseParagraph);
+            console.log("ciao");
+            var response = data;
+            console.log(response);
+            var letters = response.split('');
+
+            var index = 0;
+            var interval = setInterval(function() {
+              responseParagraph.textContent += letters[index];
+              index++;
+
+              if (index === letters.length) {
+                clearInterval(interval);
+                textToSpeechIta(response);
+              }
+            }, 20);
+        },
+        error: function(error) {
+          console.log("Si è verificato un errore durante la richiesta dei dati:", error);
+        }
+      });
+      console.log('La pagina è stata avviata.');
+    };
+
+
+
+
+      function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+          outputDiv.innerHTML += "<p class=paragraph-containerdom >  <strong>Tu</strong></p>";
+          outputDiv.innerHTML += "<p class=paragraph-containerdom > " + inputValue + "</p>";
+          var checkbox = document.querySelector('.switch input[type="checkbox"]');
+          var checkboxlingua=document.querySelector('.switch1 input[type="checkbox"]');
+          var lingua;
+          var colore;
+          if (checkbox.checked) {
+            colore="red";
+          }else{
+            colore="green"
+          }
+
+          if (checkboxlingua.checked) {
+            lingua="inglese";
+          }else{
+            lingua="italiano";
+          }
+
+          sendTranscriptionToServer(inputValue,colore,lingua);
+
+          document.getElementById("input-field").value = "";
+        }
+      }
+      
+      function sendTranscriptionToServer(frase,colore,lingua) {
+
+        var dataToSend = {
+          parametro1: frase,
+          parametro2: colore,
+          parametro3: lingua
+        };
+        $.ajax({
+          url: "http://localhost:5000/passaggio-trascr",
+          method: "POST",
+          data: dataToSend,
+
+          success: function(data) {
+
+            outputDiv.innerHTML += "<p>" + "<strong>UNIPG</strong>" + "</p>";
+
+          var responseParagraph = document.createElement('p');
+            responseParagraph.classList.add('response-paragraph');
+            outputDiv.appendChild(responseParagraph);
+            var response = data.data.message;
+            var letters = response.split('');
+
+            var index = 0;
+            var interval = setInterval(function() {
+              responseParagraph.textContent += letters[index];
+              index++;
+
+              if (index === letters.length) {
+                clearInterval(interval);
+                
+                if(lingua=='italiano'){
+                textToSpeechIta(response);
+                }else{
+                textToSpeechIng(response);
+                }
+              }
+            }, 20);
+        },
+        error: function(error) {
+          console.log("Si è verificato un errore durante la richiesta dei dati:", error);
+        }
+      });
+    }
+
+      function handleButtonClick() {
+
+        recognition.start();
+
+        recognition.onresult = (event) => {
+        result= event.results[0][0].transcript;
+        document.getElementById("input-field").value = result;
+        inputValue=result;
+      }
+    }
+    </script>
+
+</body>
+</html>
