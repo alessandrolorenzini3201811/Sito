@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-    var jsonPath ='http://localhost:5000/'; // Imposta il percorso del file JSON
+    var jsonPath ='http://3.72.77.8:5000/'; // Imposta il percorso del file JSON
 
     fetchJSON(jsonPath)
         .then(json => {

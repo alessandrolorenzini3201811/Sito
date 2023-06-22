@@ -57,7 +57,7 @@ app.post('/passaggio-trascr', (req, res) => {
       if(data.intents[0]!=undefined){
       risposta = data.intents[0].id;
       console.log(risposta);
-    fetch('http://localhost:4000/grafo', {
+    fetch('http://18.195.119.160:4000/grafo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
