@@ -17,8 +17,7 @@
     <p class="text">UNIPG CHATBOT</p>
     <p class="text1">FRONTEND</p>
     <p class="text2">BACKEND</p>
-    <p>ITA</p>
-    <p>ING</p>
+
     <img src="logo-coro-unipg.png" class="imm_unipg">
   </div>
 
@@ -93,7 +92,7 @@
 
       window.onload = function() {
         $.ajax({
-          url: "http://localhost:5000/passaggio-gen",
+          url: "http://3.72.77.8:5000/passaggio-gen",
           method: "GET",
 
           success: function(data) {
@@ -163,7 +162,7 @@
           parametro3: lingua
         };
         $.ajax({
-          url: "http://localhost:5000/passaggio-trascr",
+          url: "http://3.72.77.8:5000/passaggio-trascr",
           method: "POST",
           data: dataToSend,
 
