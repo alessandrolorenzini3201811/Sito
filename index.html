@@ -92,7 +92,7 @@
 
       window.onload = function() {
         $.ajax({
-          url: "http://3.72.77.8:5000/passaggio-gen",
+          url: "http://3.72.77.8:443/passaggio-gen",
           method: "GET",
 
           success: function(data) {
@@ -162,7 +162,7 @@
           parametro3: lingua
         };
         $.ajax({
-          url: "http://3.72.77.8:5000/passaggio-trascr",
+          url: "http://3.72.77.8:443/passaggio-trascr",
           method: "POST",
           data: dataToSend,
 
